@@ -28,12 +28,12 @@ class DevelopmentSettingsPlugin : public GlacierSettingsPlugin {
     Q_PLUGIN_METADATA(IID "Glacier.SettingsPlugin")
 public:
     DevelopmentSettingsPlugin(QObject* parent = nullptr);
-    PluginCategory category() { return PluginCategory::Development; }
-    QString id() { return "development"; }
-    QString title() { return tr("Development"); }
-    QString description() { return tr("Development tools and settings"); }
-    QString qmlPath() { return "/usr/share/glacier-settings/plugins/development/development.qml"; }
-    QString icon() { return "/usr/share/glacier-settings/plugins/development/development.svg"; }
+    PluginCategory category() const { return PluginCategory::Development; }
+    QString id() const { return "development"; }
+    QString title() const { return tr("Development"); }
+    QString description() const { return tr("Development tools and settings"); }
+    QString qmlPath() const { return "/usr/share/glacier-settings/plugins/development/development.qml"; }
+    QString icon() const { return "/usr/share/glacier-settings/plugins/development/development.svg"; }
     bool enabled();
 
 private slots:
